@@ -1,3 +1,25 @@
 {
-  "schema": {}
+    "prompts": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "label": "Project name"
+        },
+        "description": {
+            "type": "string",
+            "required": true,
+            "label": "Project description",
+            "default": "Simple project"
+        },
+        "author": {
+            "type": "string",
+            "label": "Author"
+        },
+        "license": {
+            "type": "string",
+            "label": "License",
+            "default": "MIT"
+        }
+    },
+    "completeMessage": "{{#inPlace}}To get started:\n\n  yarn\n  yarn start{{else}}To get started:\n\n  cd {{destDirName}}\n  yarn\n  yarn start{{/inPlace}}"
 }
